@@ -2,7 +2,7 @@ name: MyFirst Workflow
 
 on: push
   
-Jobs:
+jobs:
    Myfirstjob:
     runs-on: ubuntu-24.04
     steps:
