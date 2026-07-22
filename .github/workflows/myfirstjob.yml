@@ -1,8 +1,9 @@
 name: MyFirst Workflow
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '20 14 * * 3'
+    - cron: '32 14 * * 3'
   
 jobs:
    Myfirstjob:
