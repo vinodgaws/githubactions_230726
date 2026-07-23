@@ -1,4 +1,4 @@
-name: 05 - Node.js Matrix Setup with Multi Version and multi OS
+name: Node.js Matrix Setup with Multi Version and multi OS
 
 on:
   push:
