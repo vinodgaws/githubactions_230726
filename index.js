@@ -5,11 +5,11 @@ console.log("\nHello from GitHub Actions!");
 console.log(`
 About Me
 ---------
-Name      : Avinash Reddy Thipparthi
+Name      : Vinod Babu G
 Role      : Cloud & Infrastructure Architect
 Founder   : Aviz Academy
 Expertise : AWS | DevOps | Cloud | AI | Security
-YouTube   : Aviz Academy | AWS with Avinash Reddy
+YouTube   : Aviz Academy | AWS with Vinod Babu G
 
 This workflow is running successfully! 🎉
 `);
