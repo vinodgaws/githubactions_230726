@@ -1,0 +1,15 @@
+name: 01-MyFirst Workflow
+
+on:
+    push:
+        branches: [main, feature]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+  myfirstjob:
+    runs-on: ubuntu-24.04
+    steps:
+        - name: Print my name
+          run: echo "hello, Am Avinash and Am learning GHA"

@@ -1,4 +1,4 @@
-name: Node Js Setup
+name: 03-Node Js Setup
 
 on:
   push:
