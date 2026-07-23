@@ -1,0 +1,21 @@
+name: selfhosted runner
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+    build:
+        runs-on: self-hosted
+        steps:
+            - name: checkout the code
+              uses: actions/checkout@v7
+            - name: Run Application
+              run: node index.js
+            - name: run our commands
+              run: |
+                echo "This is running on Selfhosted runner"
+                node --version
+                git --version
+            - name: list my s3 buckets
+              run: aws s3 ls
