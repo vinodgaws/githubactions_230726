@@ -1,4 +1,4 @@
-name: selfhosted runner
+name: 07 selfhosted runner
 
 on:
   push:
