@@ -27,7 +27,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: Create new bucket
-        run: aws s3 mb s3://${{ github.event.inputs.new_bucket_name }} --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
+        run: aws s3 mb s3://${{ github.event.inputs.new_bucket_name }} --region ap-south-1
 
       - name: Copy objects
         run: aws s3 sync s3://${{ github.event.inputs.old_bucket_name }} s3://${{ github.event.inputs.new_bucket_name }}
