@@ -1,0 +1,23 @@
+name: deploy to ec2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+        - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: setup SSH key in runner
+        run: |
+            echo "${{ secrets.EC2_SSH_KEY }}" > Mylinuinst_KP.pem
+            chmod 400 Mylinuinst_KP.pem
+
+      - name: Copy file to EC2 using SCP
+        run: | 
+            sudo scp -o StrictHostKeyChecking=no -i Mylinuinst_KP.pem -r * ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/html/
