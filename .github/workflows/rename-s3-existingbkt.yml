@@ -12,6 +12,10 @@ on:
         required: true
         type: string
 
+permissions:
+    id-token: write
+    contents: read
+
 jobs:
   rename-bucket:
     runs-on: ubuntu-latest
