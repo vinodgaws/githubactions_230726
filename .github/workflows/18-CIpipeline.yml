@@ -1,0 +1,13 @@
+name: call other workflows
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    dependency-scan:
+        uses: ./.github/workflows/16-dependencyscan.yml
+
+    code-quality:
+        uses: ./.github/workflows/17-codequality.yml
